@@ -1,5 +1,10 @@
 .contents-row
   = form_for @comments do |f|
-    = f.text_field :title
-    = f.text_area :message
-    = f.submit "send"
+    .title
+      = f.text_field :title, :placeholder => "マンガ名を入力してください"
+    .message
+      = f.text_area :message
+    .btn
+      = f.submit "send"
+    .ex-btn
+      %a.ex{ :href => "/"} やめる

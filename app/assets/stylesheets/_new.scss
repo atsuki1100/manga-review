@@ -1,0 +1,21 @@
+.contents-row {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  z-index:  border-box;
+  .title {
+  }
+  .message {
+  padding-top: 30px;
+  }
+  .btn {
+
+  }
+  .ex-btn {
+    padding-top: 100px;
+    .ex {
+      font-size: 130%;
+      color: darkred;
+    }
+  }
+}
