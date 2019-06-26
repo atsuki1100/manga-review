@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
-    @comments = Comment.all.order("created_at DESC").page(params[:page]).per(10)
+    @comments = Comment.includes(:user).order("created_at DESC").page(params[:page]).per(10)
   end
   
   def new
@@ -9,8 +9,14 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @commnets = Comment.new(comment_params)
-    @commnets.save
+    @comments = Comment.create(title: comment_params[:title], message: comment_params[:message], user_id: current_user.id)
+  end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    if comment.user_id == current_user.id
+      comment.destroy
+    end
   end
 
   private

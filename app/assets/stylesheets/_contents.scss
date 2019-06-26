@@ -11,6 +11,9 @@
       padding: 30px;
       border: ridge 1px black;
       background-color: rgba(223, 223, 213, 0.856);
+      .more {
+        float: right;
+      }
       .title {
         font-size: 150%;
         padding-bottom: 15px;
