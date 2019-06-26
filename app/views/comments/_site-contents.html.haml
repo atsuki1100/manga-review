@@ -1,0 +1,7 @@
+.contents
+  .contents__message
+    - @comments.each do |comment|
+      .brog
+        %h2.title= comment.title
+        - simple_format(comment.message)
+        %p.text= comment.message

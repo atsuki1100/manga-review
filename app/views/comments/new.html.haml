@@ -1,0 +1,5 @@
+.contents-row
+  = form_for @comments do |f|
+    = f.text_field :title
+    = f.text_area :message
+    = f.submit "send"
