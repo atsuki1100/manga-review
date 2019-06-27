@@ -19,6 +19,17 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @comments = Comment.find(params[:id])
+  end
+
+  def update
+    comment = Comment.find(params[:id])
+    if comment.user_id == current_user.id
+      comment.update(comment_params)
+    end
+  end
+
   private
 
   def comment_params

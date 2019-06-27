@@ -4,8 +4,10 @@
       .brog
         - if user_signed_in? && current_user.id == comment.user_id
           .more
+            =link_to "編集", "comments/#{comment.id}/edit", method: :get
             =link_to "削除", "comments/#{comment.id}", method: :delete
         %h2.title= comment.title
         - simple_format(comment.message)
         %p.text= comment.message
-  = paginate(@comments)
+  .page
+    = paginate(@comments)

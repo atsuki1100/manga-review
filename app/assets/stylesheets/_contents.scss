@@ -1,7 +1,9 @@
 .contents {
   float: left;
   width: 100%;
-  height: calc(100vh - 150px);
+  height: 100%;
+  background: url('jessica-ruscello-OQSCtabGkSY-unsplash.jpg') fixed;
+  background-size: cover;
   &__message {
     text-align: center;
     padding-left: 250px;
@@ -10,7 +12,7 @@
       height: 200px;
       padding: 30px;
       border: ridge 1px black;
-      background-color: rgba(223, 223, 213, 0.856);
+      background-color: rgba(223, 223, 213, 0.952);
       .more {
         float: right;
       }
@@ -19,5 +21,12 @@
         padding-bottom: 15px;
       }
     }
+  }
+  .page {
+    background-color: rgba(203, 209, 223, 0.788);
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
   }
 }
